@@ -47,13 +47,15 @@ const MyPostWidget = ({ picturePath }) => {
       formData.append("picturePath", image.name);
     }
 
-    const response = await fetch(`http://localhost:3001/posts`, {
+    const response = await fetch(`http://localhost:3001/createPosts`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
     });
     const posts = await response.json();
     dispatch(setPosts({ posts }));
+    // console.log("posts: ");
+    // console.log(posts);
     setImage(null);
     setPost("");
   };
@@ -149,7 +151,7 @@ const MyPostWidget = ({ picturePath }) => {
         )}
 
         <Button
-        //   disabled={!post}
+          disabled={!post}
           onClick={handlePost}
           sx={{
             color: palette.background.alt,

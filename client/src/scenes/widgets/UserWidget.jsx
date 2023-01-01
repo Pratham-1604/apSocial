@@ -37,7 +37,7 @@ const UserWidget = ({ userId, picturePath }) => {
   if (!user) {
     return null;
   }
-
+  console.log(user.friends);
   const {
     firstName,
     lastName,
@@ -47,6 +47,9 @@ const UserWidget = ({ userId, picturePath }) => {
     impressions,
     friends,
   } = user;
+
+  console.log("friends count: ");
+  console.log(friends.length);
 
   return (
     <WidgetWrapper>
@@ -95,7 +98,7 @@ const UserWidget = ({ userId, picturePath }) => {
       {/* THIRD ROW  */}
       <Box p="1rem 0">
         <FlexBetween mb="0.5rem">
-          <Typography color={medium}> Who's viewd your profile </Typography>
+          <Typography color={medium}> Who's viewed your profile </Typography>
           <Typography color={main} fontWeight="500">
             {viewedProfile}
           </Typography>
