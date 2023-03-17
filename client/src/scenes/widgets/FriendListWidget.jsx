@@ -34,8 +34,8 @@ const FriendListWidget = ({ userId }) => {
     // console.log("friends1 : ");
     // console.log(friends);
 
-    dispatch(setFriends({ friends :  data }));
-    
+    dispatch(setFriends({ friends: data }));
+
     // console.log("friends2 : ");
     // console.log(friends);
   };
@@ -46,8 +46,7 @@ const FriendListWidget = ({ userId }) => {
 
   if (!friends) {
     return null;
-  }
-  else{
+  } else {
     // console.log(friends);
   }
 
