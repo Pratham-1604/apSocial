@@ -58,7 +58,7 @@ const Navbar = () => {
               cursor: "pointer",
             },
           }}>
-          Sociopedia
+          apSocial
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
